@@ -17,11 +17,11 @@ public class Student {
     public static void main(String[] args) {
     	// 변수명은 소문자로 표기 (첫글자 소문자, 카멜표기법 사용)
        int hakbun;
-        string name;
-        string address;
-        string birthday;
-        string hakname;
-        string professor;
+        String name;
+        String address;
+        String birthday;
+        String hakname;
+        String professor;
     }
 }
 

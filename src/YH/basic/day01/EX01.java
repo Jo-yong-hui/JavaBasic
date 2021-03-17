@@ -1,4 +1,5 @@
 package YH.basic.day01;
+
 /**
  * 
  *연습문제 실습

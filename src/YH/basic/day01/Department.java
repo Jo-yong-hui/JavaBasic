@@ -15,7 +15,7 @@ public class Department {
     	  String officpos;
     	  String hakchief;
     	
-    	  
+    	 
       }
 }
 
