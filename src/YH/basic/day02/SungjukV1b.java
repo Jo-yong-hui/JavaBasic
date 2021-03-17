@@ -58,14 +58,13 @@ import java.util.Scanner;
     	    grd = '가';
     	
     	 //출력
+    	    String	 fmt =
+    					" 이름: %s, 국어: %d, 영어: %d, 수학: %d\n";
+    			System.out.printf(fmt, name, kor, eng, mat);
+    			
+    			fmt = "총점: %d, 평균: %.1f, 학점: %c";
 
-	 	 System.out.println("이름 : ");
-		 System.out.println(kor);
-		 System.out.println(eng);
-		 System.out.println(mat);
-	
-		 System.out.println(tot);
-		 System.out.println(avg);
+    			System.out.printf(fmt, tot, avg, grd);
     	 
      }
 }

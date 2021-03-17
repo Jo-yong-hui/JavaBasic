@@ -43,19 +43,11 @@ public class TestPrintf {
     
     
  
-    //총점, 평균 처리
-	name = "홍길동";
-	kor = 95;
-	eng = 80;
-	mat = 90;
-    
-	tot = kor + eng + mat;
-    avg = tot / 3;
-    grd = '가';
+  
     // 이름 : 홍길동, 국어 : , 영어:   , 수학:  
     // 총점 :       , 평균 : , 학점:  
      
-     String fmt = "x = %d and pi = %f  \n";
+      fmt = "x = %d and pi = %f  \n";
      System.out.printf( fmt, x, pi);
  
      System.out.print(" and pi = ");
@@ -65,14 +57,11 @@ public class TestPrintf {
      System.out.print("x = " + x);
      System.out.println(" and pi = " + pi);
      
-
-		String fmt =
-				" 이름: %s, 국어: %d, 영어: %d, 수학: %d\n";
-		System.out.printf(fmt, name, kor, eng, mat);
-		
-		fmt = "총점: %d, 평균: %.1f, 학점: %c";
-
-		System.out.printf(fmt, tot, avg, grd);
+    
+     
+     
+     
+	
 	              
     }
 	
