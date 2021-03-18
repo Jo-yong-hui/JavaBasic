@@ -68,7 +68,7 @@ public class EX02 {
 			//H와 I가 숫자형으로 변환되어 연산이 수행됨
 			
 			//System.out.print("Print both of us" + "Me too"); 
-			//,였는데 +로 바꿔준것이다.
+			//,였는데 +로 바꿔준것이다. ,는 파이썬용
 		 	//System.out.println("Reverse" + 'I' + 'T');
 			
 			//System.out.println("No! Here is" + 1 + "more example");
