@@ -83,8 +83,8 @@ public class EX02 {
 			//System.out.println;
             //괄호가 필요!
 			
-			System.out.print("How about this one" + "?" + "Huh?");
-			
+			//System.out.print("How about this one" + "?" + "Huh?");
+			//++ 두개 있던거 + 하나로 바꾸고, '는 ''두개로 늘려준다
 			
 }
 }
