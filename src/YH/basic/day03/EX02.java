@@ -69,7 +69,7 @@ public class EX02 {
 			
 			//System.out.print("Print both of us", "Me too"); 파이썬 용
 			
-			//System.out.println("Reverse" + 'I' + 'T');
+		 	//System.out.println("Reverse" + 'I' + 'T');
 			
 			//System.out.println("No! Here is" + 1 + "more example");
 			
