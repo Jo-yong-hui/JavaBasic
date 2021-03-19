@@ -28,6 +28,7 @@ public class Condition {
 		
 	  // ex) 1~100사이 정수 중 짝수라면 "짝수입니다"를,
 	  // 홀수면 "홀수입니다"라고 출력하세요.
+	  // 한문장일 떈 {} 뺴도됨
 	  for(int i = 0; i <=100; ++i) {
 		  if(i % 2 == 0) 
 		  System.out.println(i + "는 짝수입니다");
@@ -53,11 +54,11 @@ public class Condition {
 	  		isMarried = sc.nextInt();
 	  		
 	  		if (isMarried == 0) //미혼
-	  			if(salary < 3000) {tax = salary * 0.1;}
+	  			if(salary < 3000) {tax = salary * 0.1;} // 한문장일 떈 {} 뺴도됨
 	  			else {tax = salary * 0.25;}
 	  		
 	  		else //기혼
-	  			if(salary < 6000) {tax = salary * 0.15;}
+	  			if(salary < 6000) {tax = salary * 0.15;} // 한문장일 떈 {} 뺴도됨
 	  			else {tax = salary * 0.35;}
 	  	
 	  		
