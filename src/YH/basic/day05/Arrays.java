@@ -89,11 +89,7 @@ public class Arrays {
 //	     System.out.println(lotto[i]);		
 //	     }
 
-	//54번
-	char [] letter = {'a','b','c'};
-	for( int index = 0; index < letter.length; index++)
-		System.out.print(letter[index] + ", ");
-	
+
 	
 	
 	}
