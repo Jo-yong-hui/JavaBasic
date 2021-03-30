@@ -49,7 +49,8 @@ public class SungJukV4 {
             }
         }
 
-        //결과출력 // art+ insert를 생성자한것
+        //결과출력
+        // art+ insert를 생성자한것
         @Override
         public String toString() {
             return
