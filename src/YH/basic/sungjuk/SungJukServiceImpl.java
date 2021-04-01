@@ -10,7 +10,7 @@ public class SungJukServiceImpl implements SungJukService {
     public static SungJukService getInstance(){
         if (sjsrv == null) sjsrv = new SungJukServiceImpl();
         return sjsrv;
-    } 
+    }
     // 싱글톤 패턴 끝
 
     @Override
@@ -34,6 +34,8 @@ public class SungJukServiceImpl implements SungJukService {
     @Override
     public SungJukVO readSungJuk() {
         return null;
+
+
     }
 
     @Override
