@@ -10,7 +10,12 @@ import java.util.Scanner;
 // 사번, 이름, 성, 이메일, 전화번호, 입사일, 직책, 급여, 수당, 상사번호, 부서번호
 // empno, fname, lname, email. phone, hdate, jobid, sal, comm, mgrid, detpid
 // 기본 정보: 사번, 이름, 성, 이메일, 전화번호, 입사일(오늘날짜로)
+// 기본 정보(6개따로 showshowEmployee안에 넣음) :  empno, fname, lname, email. phone, hdate
+
 // 추가 정보: 난수를 이용해 자동생성하도록 함 (makeExtInfo)
+// 추가 정보 : jobid, sal, comm, mgrid(상사번호), detpid(부서번호)
+
+
 public class EmployeeV1Main {
     // 사원정보를 입력받아 동적배열에 저장하고
     // 조회 및 수정/삭제하는 프로그램 작성

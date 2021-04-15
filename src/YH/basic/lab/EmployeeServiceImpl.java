@@ -30,6 +30,7 @@ public class EmployeeServiceImpl implements EmployeeService {
         private EmployeeServiceImpl(){
     }
 
+    //이거는 싱글톤 아님 따로 EmployeeService getInstance 만든거임
     public static EmployeeService getInstance() {
             if(empsrv == null) empsrv = new EmployeeServiceImpl();
             return  empsrv;
@@ -95,7 +96,7 @@ public class EmployeeServiceImpl implements EmployeeService {
     // 사원 기본정보(사번, 이름, 성, 이메일, 전화번호, 입사일)등을
     // 리스트 형태로 출력함
     @Override
-    public void showEmployee() {
+    public void showEmployee() { // 전체적으로 직원 입력값 그 중에 6개만 정했음
             String fmt = "%s %s %s %s %s %s \n";
             for(EmployeeVO emp:empdata){
                 System.out.printf(fmt, emp.getEmpno(),
@@ -105,12 +106,12 @@ public class EmployeeServiceImpl implements EmployeeService {
     }
 
     @Override
-    public void showOneEmployee() {
+    public void showOneEmployee() {  //한명 한명 전체 싹다 불러온 입력값 그래서 11개s
         String fmt = "%s %s %s %s %s %s \n" +
                 "%s %s %s %s %s \n"; //데이터 11개라서 $s는 11개
         Scanner sc = new Scanner(System.in);
         System.out.print("조회할 회원번호는?");
-        String empno = sc.next();
+        String empno = sc.next(); //사번입력값
         //전체 이엠피 데이타중에서 e라는 변수에서 일부정보찾기
 
         EmployeeVO emp = null;
@@ -118,7 +119,8 @@ public class EmployeeServiceImpl implements EmployeeService {
             // 찾는 데이터가 동적배열에 존재한다면
             // emp변수에 저장하고 반복문을 종료함
 
-            if (e.getEmpno().equals(emp)) {
+            // 전체데이터 안에서 Empno사번이 실제 empno와 같은지 판단
+            if (e.getEmpno().equals(empno)) {
                 emp = e;//e에할당
                 break;
 
