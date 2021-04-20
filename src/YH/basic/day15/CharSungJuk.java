@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class CharSungJuk {
     public static void main(String[] args) {
-        // 이름, 국어, 영어, 수학을 키도브로 입력받아
+        // 이름, 국어, 영어, 수학을 키보드로 입력받아
         // sungjuk.dat에 저장하는 코드를 작성하세요
         // 단, 파일에 저장하는 문자열 형식은 다음과 같이 합니다.
 
@@ -28,7 +28,7 @@ public class CharSungJuk {
         //System.out.println("수학은?");
         //mat = sc.nextInt();
 
-        // 빈칸만큼 띄어서 데이터 출력하기
+        // 빈칸만큼 띄어서 한꺼번에 데이터 출력하기
         System.out.println("성적은? ('이름 국어 영어 수학' 순서로)");
         name = sc.next();
         kor = sc.nextInt();
@@ -38,10 +38,15 @@ public class CharSungJuk {
         // 입력받은 성적데이터를 파일에 저장
         String fpath = "c:/java/sungjuk.dat";
 
+
+        // FileWriter는 파일에 문자 단위로 출력하는 스트림 클래스
+        //  BufferedWriter : 문자로 쓸때 배열을 제공하여 한꺼번에 쓸 수 잇는 기는 제공
         FileWriter fw = null;
         BufferedWriter bw = null;
 
+        // try catch 구문은 오류를 발견하고 핸들링하기 위하여 사용됩니다.
         // ,true로 append놓으면 이름 ,국어,영어 새로 입력할떄마다 데이터가 누적됨
+
         try {
             fw = new FileWriter(fpath, true);
             //파일에 데이터 누적 옵션 설정
@@ -63,8 +68,10 @@ public class CharSungJuk {
         }
 
         // 저장한 성적데이터를 화면에 출력
-        FileReader fr = null;
+        FileReader fr = null; // FileReader : 파일에서 문자 단위로 읽는 스트림 클래스
         BufferedReader br = null;
+        // 문자로 읽을때 배열을 제공하여 한꺼번에 읽을 수 있는 기능 제공
+
 
         try {
             fr = new FileReader(fpath);

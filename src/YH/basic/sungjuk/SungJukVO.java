@@ -1,6 +1,10 @@
 package YH.basic.sungjuk;
 
-public class SungJukVO {
+import java.io.Serializable;
+
+// 직렬화를 지원하기 위해 Serializable 구현해서 정의해야 함!
+// 직렬화 대상 객체(SungJukVO)에다가 implements Serializable 붙여줘야함
+public class SungJukVO implements Serializable {
     // 데이터 값만 쓴것
 
     protected String name;

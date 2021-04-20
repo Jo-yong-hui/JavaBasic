@@ -50,7 +50,7 @@ public class CharStream {
             fw.write(height + "\n");
 
             fw.close();  //파일 쓰기종료
-            // FileWriter빨간줄 뜬곳에다가 alt + 엔터눌러서 try catch로 감싼것
+            // FileWriter빨간줄에다가 alt + 엔터눌러서 try catch로 감싼것
 
         } catch (IOException e) {
             System.out.println("파일쓰기 오류!!");
@@ -92,10 +92,12 @@ public class CharStream {
                         System.out.println( br.readLine() );
                     }
 
+                    // 위에서 fr먼저하고 br을 실행했기때문에 종료할때는
+                    // 끝난 것부터 br로 시작하고 fr로 끝냄
                     br.close();   // LIFO  형식으로 객체를 닫음
                     fr.close();
                  } catch (Exception e1) {
-                     e.printStackTrace();
+                     e1.printStackTrace();
                  }
              }
 

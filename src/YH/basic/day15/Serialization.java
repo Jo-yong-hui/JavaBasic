@@ -13,6 +13,7 @@ public class Serialization {
         FileReader fr = new FileReader(fpath);
         BufferedReader br = new BufferedReader(fr);
 
+        //readLine은 파일의 내용을 한 행씩 읽는다.
         String nums = br.readLine();
         System.out.println(nums);
 
@@ -62,7 +63,7 @@ public class Serialization {
             BufferedInputStream bis = new BufferedInputStream(fis);
             ObjectInputStream ois = new ObjectInputStream(bis);
 
-            //저장된 데이터 불러오기 readObject
+            //저장된 데이터 불러오기 readObject //readobject에서 알트엔터로 예외처리클릭
             ArrayList data2 = (ArrayList) ois.readObject();
             String name = (String) data2.get(0);
             int kor = (int) data2.get(1);

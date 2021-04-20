@@ -7,11 +7,13 @@ import java.util.Scanner;
 
 public class SerializeSungJuk {
     public static void main(String[] args) throws IOException, ClassNotFoundException {
-        // 이름, 국어, 영어, 수학을 키도브로 입력받아
+        // 이름, 국어, 영어, 수학을 키보드로 입력받아
         // sungjuk.bin에 저장하는 코드를 작성하세요
         // 단, 입력받은 값들은 SungJukV0에 저장한 후 
         // 직렬화해서 저장함
+
         // 입력 데이터: 혜교 97 98 95
+        // 역직렬화란  변환된 정보를 원래정보로 돌려줌
         // 역직렬화 후 결과 : 혜교, 97, 98, 95, 290(총점), 96.7(평균)
         // 직렬화를 지원하기 위해 Serializable 구현해서 정의해야 함!
         // 직렬화 대상 객체(SungJukVO)에다가 implements Serializable 붙여줘야함

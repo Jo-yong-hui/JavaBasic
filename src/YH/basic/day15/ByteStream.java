@@ -24,7 +24,7 @@ public class ByteStream {
         // FileWriter 객체 초기화
         FileOutputStream fos = null;
         BufferedOutputStream bos = null;
-        OutputStreamWriter osw = null;
+        OutputStreamWriter osw = null; // 바이트 기반 스트림에서 문자를 저장
 
 
         try {
