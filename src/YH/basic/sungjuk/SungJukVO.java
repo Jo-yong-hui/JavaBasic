@@ -7,13 +7,31 @@ import java.io.Serializable;
 public class SungJukVO implements Serializable {
     // 데이터 값만 쓴것
 
-    protected String name;
-    protected int kor;
-    protected int eng;
-    protected int mat;
-    protected int tot;
-    protected double avg;
-    protected char grd;
+    protected String sjno; //여기서 sjno는 문자로 한 것  // 열1   %s
+    protected String name; //열 순서 이거그대로    / 열2        %s
+    protected int kor; //3   %d
+    protected int eng; //4   %d
+    protected int mat; //5  %d
+    protected int tot; //6 %d
+    protected double avg; //7 %.1f
+    protected char grd; //8 %s
+    protected String regdate; //9  %s
+
+    public String getSjno() {
+        return sjno;
+    }
+
+    public void setSjno(String sjno) {
+        this.sjno = sjno;
+    }
+
+    public String getRegdate() {
+        return regdate;
+    }
+
+    public void setRegdate(String regdate) {
+        this.regdate = regdate;
+    }
 
     public SungJukVO(String name, int kor, int eng, int mat) {
         this.name = name;
@@ -78,6 +96,8 @@ public class SungJukVO implements Serializable {
         }
 
         public void setGrd ( char grd){ this.grd = grd; }
+
+
 
         //String.format 형식을 result 변수에 담아서 다음에 또 쓸 수 있다.
     @Override

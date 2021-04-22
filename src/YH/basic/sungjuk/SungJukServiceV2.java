@@ -6,6 +6,7 @@ public interface SungJukServiceV2 {
 
          void displayMeu();
          void computeSungJuk(SungJukVO sj);
+
          void newSungJuk();
          void showSungJuk();
          void showOneSungJuk();

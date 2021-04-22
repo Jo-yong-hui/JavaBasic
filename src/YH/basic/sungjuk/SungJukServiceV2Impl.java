@@ -82,7 +82,7 @@ public class SungJukServiceV2Impl implements SungJukServiceV2 {
         for(SungJukVO sj : sjdata){
             System.out.printf(fmt,pos, sj.getName(),sj.getKor()
                     ,sj.getEng(),sj.getMat());
-                ++pos;
+                ++pos; //여기서 pos는 position
         }
 
     }

@@ -129,21 +129,11 @@ public class SungJukServiceV3Impl implements SungJukServiceV3 {
 
         switch ((int) sj.getAvg() / 10) {
             case 10:
-            case 9:
-                sj.setGrd('수');
-                break;
-            case 8:
-                sj.setGrd('우');
-                break;
-            case 7:
-                sj.setGrd('미');
-                break;
-            case 6:
-                sj.setGrd('양');
-                break;
-            default:
-                sj.setGrd('가');
-                break;
+            case 9: sj.setGrd('수'); break;
+            case 8: sj.setGrd('우'); break;
+            case 7: sj.setGrd('미'); break;
+            case 6: sj.setGrd('양'); break;
+            default:sj.setGrd('가'); break;
 
         }
     }
@@ -182,7 +172,7 @@ public class SungJukServiceV3Impl implements SungJukServiceV3 {
 
     }
 
-
+    // 역직렬화 = 스트림으로부터 객체를 입력 = ObjectInputStream 사용
     // 기존에 입력된 성적데이터를 역직렬화로
     // 파일에서 읽어서 메모리에 적재하는 기능 담당
     //try : try 문 안에 있는 코드들이 에러가 발생하는 경우 catch 문으로 전달합니다.
@@ -207,19 +197,11 @@ public class SungJukServiceV3Impl implements SungJukServiceV3 {
             System.out.println("파일이 없거나 시스템 오류입니다!@!@");
         } finally {
             if (ois != null)
-                try {
-                    ois.close();
-                } catch (IOException e) {
-                }
+                try { ois.close(); } catch (IOException e) { }
             if (bis != null)
-                try {
-                    bis.close();
-                } catch (IOException e) {
-                }
+                try { bis.close(); } catch (IOException e) { }
             if (fis != null)
-                try {
-                    fis.close();
-                } catch (IOException e) {
+                try { fis.close(); } catch (IOException e) {
                 }
 
         }
@@ -245,24 +227,14 @@ public class SungJukServiceV3Impl implements SungJukServiceV3 {
         } catch (Exception ex) {
             //ex.printStackTrace();
             System.out.println("파일이 없거나 시스템 오류입니다!@!@");
-        } finally {
-            if (oos != null)
-                try {
-                    oos.close();
-                } catch (IOException e) {
-                }
+        } finally { if (oos != null) try { oos.close(); }
+                                    catch (IOException e) { }
 
-            if (bos != null)
-                try {
-                    bos.close();
-                } catch (IOException e) {
-                }
+            if (bos != null) try { bos.close(); }
+                                catch (IOException e) { }
 
             if (fos != null)
-                try {
-                    fos.close();
-                } catch (IOException e) {
-                }
+                try { fos.close(); } catch (IOException e) { }
 
 
         }
@@ -294,7 +266,7 @@ public class SungJukServiceV3Impl implements SungJukServiceV3 {
                         Integer.parseInt(data[3]));
                 computeSungJuk(sj);
 
-                sjdata.add(sj);
+                sjdata.add(sj); //sjdata에 성적데이터 입력
             }
         } catch (Exception ex) {
             ex.printStackTrace();
@@ -314,14 +286,15 @@ public class SungJukServiceV3Impl implements SungJukServiceV3 {
                 BufferedWriter bw = new BufferedWriter(fw);
         ) {
             String result = "";
-            for (SungJukVO sj : sjdata) {  //sjdaa를 파일 저장하수 없어서 성적 vo 직렬화로 문자로 바꿈
+            for (SungJukVO sj : sjdata) {  //sjdata를 파일을 저장하수 없어서 성적 vo 직렬화로 문자로 바꿈
                 result = String.format(csvfmt, sj.getName(), sj.getKor(), sj.getEng(), sj.getMat()
                         , sj.getTot(), sj.getAvg(), sj.getGrd());
-                //csv형식으로 문잘화 한것이다.
+                //csv형식으로 문자화 한것이다.
                 // 예시로 혜교, 54, 76 ,98 ,265 , 99.3 수 형태로 문자만들어서
                 // bw.write(result)파일에 기록
                 //즉 sjdata를 bw.write(result)파일에 저장한 파일형태로 저장하는
                 // (Csv)파일직렬화이다.
+
                 bw.write(result);
 
             }
@@ -347,7 +320,7 @@ public class SungJukServiceV3Impl implements SungJukServiceV3 {
             // 텍스트파일에 저장된 반정형데이터를
             // JSON 분석기(parser)를 이용해서
             // 메모리에 객체형태로 저장함
-            //v7cmain에서 출력되는지 확인후
+            // v7cmain에서 출력되는지 확인후
             JSONParser parser = new JSONParser();
             JSONObject obj = (JSONObject) parser.parse(lines);
 
@@ -389,8 +362,8 @@ public class SungJukServiceV3Impl implements SungJukServiceV3 {
                 String result = "";
                 bw.write("{ \"sj\":["); // json 배열 시작
                 for (SungJukVO sj : sjdata) {  //sjdaa를 파일 저장하수 없어서 성적 vo 직렬화로 문자로 바꿈
-                    result = String.format(jsonfmt, sj.getName(), sj.getKor(), sj.getEng(), sj.getMat()
-                            , sj.getTot(), sj.getAvg(), sj.getGrd());
+                    result = String.format(jsonfmt, sj.getName(), sj.getKor(), sj.getEng(),
+                            sj.getMat(), sj.getTot(), sj.getAvg(), sj.getGrd());
                     // { 'name': '혜교', 'kor: 54, 'eng':76, 'mat': 98,
                     // 'tot': 265, 'avg': 99.3, 'grd' : 수 }, 형태
 
